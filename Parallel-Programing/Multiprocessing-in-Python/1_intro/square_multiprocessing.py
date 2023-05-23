@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os
 from multiprocessing import Process, current_process
 
@@ -21,10 +23,10 @@ if __name__=='__main__':
     processes = []
     numbers = [1, 2, 3, 4, 5, 6]
 
-    for number in numbers:
-        process = Process(target=square, args=(number,)) # args = <tuple>
+    for n in numbers:
+        process = Process(target=square, args=(n,)) # args = <tupla_con_los_parámetros>
         processes.append(process)
 
-        # Los procesos se generan creando un objeto Process
+        # Cada proceso se genera creando un objeto Process
         # y llamando luego su método start() 
         process.start()
