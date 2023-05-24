@@ -18,4 +18,6 @@ En este curso vamos a aprender a usar el módulo ``multiprocessing``.
 Python está diseñado para que el código se ejecute en un hilo a la vez. El mecanismo responsable de esto es el Global Interpreter Lock (GIL). La biblioteca ``multiprocessing`` elude este bloqueo: permite que todos los núcleos de procesamiento de nuestra PC puedan trabajar simultáneamente en la ejecución del código.
 
 
+## Pool
 
+Con Pool tomamos una función y distribuimos todas sus llamadas entre todos los procesadores disponibles.
