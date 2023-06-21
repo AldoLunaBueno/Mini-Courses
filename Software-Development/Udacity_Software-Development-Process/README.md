@@ -11,6 +11,7 @@ Este curso está disponible como una [lista de reproducción](https://www.youtub
   - [Modelos de proceso de software](#modelos-de-proceso-de-software)
     - [Cuatro opciones de modelos](#cuatro-opciones-de-modelos)
     - [¿Cómo elegir el modelo de desarrollo correcto?](#cómo-elegir-el-modelo-de-desarrollo-correcto)
+- [Errores comunes](#errores-comunes)
 
 
 ## Introducción
@@ -85,7 +86,7 @@ Si no hacemos bien la ingeniería de requisitos en el futuro tendremos un costo 
 
 Naturalmente, el costo de la corrección de un error depende de la cantidad de decisiones que se hicieron basadas en este error.
 
-2. ¿Cómo se los recolectan requisitos?
+2. ¿Cómo se recolectan los requisitos?
 
 - Obtención
 - Análisis
@@ -155,7 +156,39 @@ Concretamente, los modelos de proceso de software nos dicen dos cosas:
 
 #### Cuatro opciones de modelos
 
+1. Modelo cascada
+2. Modelo espiral
+3. Modelo evolutivo de prototipos
+4. Modelo RUP
+5. Modelo ágil
+
 ![](sources/2023-06-19-16-13-32.png)
+
+**Modelo cascada**
+
+El proceso es simplemente una secuencia ordenada de pasos, y antes de pasar a cada paso que sigue se hace una revisión.
+
+1. Concepción
+2. Análisis de requerimientos
+3. Diseño arquitectónico
+4. Diseño detallado
+5. Codificación y depuración
+6. Pruebas del sistema
+
+Es la mejor opción cuando:
+1. La definición del producto es estable
+2. Se pueden conocer todos los requisitos de antemano
+3. No se requiere flexibilidad
+4. El dominio es bien conocido (la comunidad ya lo ha resuelto antes muchas veces)
+5. Las tecnologías que apoyan el producto son bien conocidas (no son tecnologías que recién se han lanzado)
+
+La debilidad del modelo cascada puro son los errores. Lo peor que puede pasar si eliges el modelo cascada es que hayan errores en los requisitos o requerimientos, ya que todas las decisiones basadas en estos errores serán más errores, y el gasto de corregirlo todo se incrementa exponencialmente cuanto más avanza el proyecto.
+
+Es difícil especificar correctamente absolutamente todos los requerimientos al inicio. Es por eso que, con lo cambiante que se ha vuelto el mundo ahora, en la actualidad este modelo tiene un peor desempeño que otros modelos más flexibles. De hecho, es raro que se opte por la versión pura de este modelo, y es más común que se le añadan ideas como la entrega iterativa.
+
+**Modelo espiral**
+
+![](sources/2023-06-20-17-24-45.png)
 
 #### ¿Cómo elegir el modelo de desarrollo correcto?
 
@@ -187,3 +220,30 @@ Elegir el modelo de desarrollo es una de las decisiones significativa porque pue
 2. Modelo espiral o modelo evolutivo de prototipos. Al ser ambos modelos iterativos, trabajan mejor en situaciones cambiantes. El modelo de cascada puro sería muy costoso, especialmente si se deben corregir errores que vienen desde los requisitos (recordemos el gráfico de barras).
 
 
+## Errores comunes
+
+Todos estos errores pueden llevar a que el proyecto fracase, así que es importantes saber detectarlos, corregirlos y, aún mejor, prevenirlos.
+
+Se agrupan en tres categorías:
+
+- Relativos a las personas
+- Relativos al producto
+- Relativos al proceso
+- Relativos a la tecnología
+
+- Relativos a las personas
+  - Los héroes: Una persona no puede hacerlo todo sola, tiene que saber cooperar con sus compañeros de equipo.
+  - Entorno hostil: La productividad disminuye en un entorno que no es agradable y cálido.
+  - Mala gestión del personal: Falta de liderazgo o trato muy vertical, intransigente o poco empático de parte del líder. O también gestiones torpes, como contratar más personal en un proyecto que está atrasado con el cronograma.
+- Relativos al proceso
+  - Cronograma demasiado optimista: Se subestima el esfuerzo necesario, se sobreestima la habilidad del equipo involucrado, etc.
+  - Mal plan: El plan es insuficiente o bien la presión por avanzar hace que no se complete.
+  - Fallos imprevistos
+- Relativos al producto
+  - Requisitos bañados en oro: Tener más requisitos de los que necesitan los usuarios.
+  - Arrastre de características: Cuando se añaden más y más características que no planificaron en un inicio, y no son necesarias.
+  - Investigación ≠ Desarrollo: Cuando se fuerza el proceso de desarrollo para dar con un nuevo algoritmo o una nueva técnica hay que investigar mucho, y sería un error, por ejemplo, manejar un cronograma rígido.
+- Tecnología
+  - Síndrome de la bala de plata: Demasiada confianza en tecnología no utilizada antes.
+  - Cambiar o añadir más herramientas
+  - Falta de automatización. Específicamente, la falta de un sistema de control de versiones como Git conduce al desastre.
