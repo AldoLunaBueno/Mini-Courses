@@ -57,3 +57,14 @@ Con la etiqueta `@RestController` convertimos a DemoApplication en una clase que
 ![](sources/2023-07-22-13-13-44.png)
 
 ## Clase Student
+
+**Capa API**
+
+![](sources/2023-07-22-15-44-28.png)
+
+![](sources/2023-07-22-15-44-48.png)
+
+**Capa de los servicios, la lógica**
+
+**Capa de acceso a datos**
+
